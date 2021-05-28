@@ -25,6 +25,13 @@ _Здесь публикуется всё, что связано с изучен
   - [\<code\>](#code)
   - [\<span\>](#span)
   - [\<br\>](#br)
+- [Формы](#forms)
+  - [\<form\>](#form)
+  - [\<input\>](#input)
+  - [\<textarea\>](#textarea)
+  - [\<select\>](#select)
+  - [\<label\>](#label)
+  - [\<button\>](#button)
 
 ---
 
@@ -443,3 +450,49 @@ ___Результат:___
 Искать я буду вдохновенья.<br>
 </p>
 <p>— <cite>Сергей Есенин</cite></p>
+
+---
+
+#### <a name="forms"></a> &#9745; Формы
+
+#### <a name="form"></a> &#10102; \<form\>
+Основу любой формы составляет элемент `<form>...</form>`. Он не предусматривает ввод данных, так как является контейнером, удерживая вместе все элементы управления формы – поля. Атрибуты этого элемента содержат информацию, общую для всех полей формы, поэтому в одну форму нужно включать поля, объединенные логически.
+
+___Пример:___
+```html
+<form action="#">
+  <label for="enter">Введите что-нибудь</label>
+  <input type="text" placeholder="Ввод" name="enter">
+  <input type="submit" value="Отправить">
+</form>
+```
+
+#### <a name="input"></a> &#10103; \<input\>
+Элемент `<input>` создает большинство полей формы. Атрибуты элемента отличаются в зависимости от типа поля, для создания которого используется этот элемент.
+
+С помощью css-стилей можно изменить размер шрифта, тип шрифта, цвет и другие свойства текста, а также добавить границы, цвет фона и фоновое изображение. Ширина поля задается свойством `width`.
+
+___Пример:___
+<form action="#">
+  <input type="text" placeholder="Имя">
+  <input type="text" placeholder="Фамилия">
+  <input type="tel" placeholder="Телефон">
+  <input type="email" placeholder="Телефон">
+  <input type="password" placeholder="Телефон">
+  <p>Ваш пол:</p>
+  <label for="male">Мужской</label>
+  <input type="radio" value="мужской" name="male">
+  <label for="female">Женский</label>
+  <input type="radio" value="женский" name="female">
+  <p>День рождения</p>
+  <input type="date" name="birthday>
+</form>
+
+#### <a name="textarea"></a> &#10104; \<textarea\>
+
+#### <a name="select"></a> &#10105; \<select\>
+
+#### <a name="label"></a> &#10106; \<label\>
+
+#### <a name="button"></a> &#10107; \<button\>
+
