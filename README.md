@@ -32,7 +32,10 @@ _Здесь публикуется всё, что связано с изучен
   - [\<select\>](#select)
   - [\<label\>](#label)
   - [\<button\>](#button)
-
+2. **CSS**
+  - [Схлопывание margin](#collapse-margin)
+  - [Выпадение вертикальных отступов](#dropping-out-margin)
+  - [Блочные и строчные элементы](#blocks-inlines)
 ---
 
 ### &#9776; HTML
@@ -544,4 +547,134 @@ ___Пример:___
 <button type="submit">Отправить заявку<button>
 ```
 
+---
 
+### &#9776; CSS
+
+#### <a name="collapse-margin"></a> &#9745; Схлопывание margin
+Смежные вертикальные отступы двух или более элементов уровня блока `margin` объединяются (перекрываются). При этом ширина общего отступа равна ширине большего из исходных. Исключение составляют отступы корневого элемента, которые не схлопываются.
+
+___Пример:___
+```html
+<div class="block1">margin-bottom 30px</div>
+<div class="block2">margin-top 30px</div>
+```
+```css
+.block1 {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin-bottom: 30px;
+}
+
+.block2 {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  margin-top: 30px;
+}
+```
+
+___Результат:___
+[Схлопывание вертикальных margin](https://codepen.io/g0dez/pen/QWpaQNK)
+
+---
+
+#### <a name="dropping-out-margin"></a> Выпадение вертикальных отступов
+Если внутри одного блока расположить другой блок и задать ему `margin-top`, то внутренний блок прижмется к верхнему краю родительского, а у родительского элемента появится отступ сверху, т.е. внутренний блок «выпадет» из родительского блока. Если у родительского элемента также был задан верхний отступ, то выберется наибольшее из значений.
+
+Чтобы избавиться от эффекта выпадения, можно задать родительскому элементу `padding-top` или добавить `border-top: 1px solid transparent`.
+
+___Пример:___
+```html
+<div class="block1">
+  <div class="block2"></div>
+</div>
+
+```
+```css
+.block1 {
+  border-top: 1px solid transparent;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+
+.block2 {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+```
+
+___Результат:___
+[Выпадение вертикальных отступов](https://codepen.io/g0dez/pen/xxqpYZz)
+
+---
+
+#### <a name="blocks-inlines"></a> Строчные и блочные элементы
+
+___Пример:___
+```html
+<body>
+  <header class="header">
+    <nav>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+     </nav>
+  </header>
+  
+  <main class="main">
+    <article class="article">
+      <header><h2>TItle</h2></header>
+      <p><span class="red">T</span>ext</p>
+      <footer><time datatime="2021-05-27">27 мая 2021 года</time></footer>
+    </article>
+  </main>
+  
+  <footer class="footer"><adress>Moscow, Pushkino</adress></footer>
+</body>
+```
+
+```css
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;  
+}
+
+.header {
+  background-color: green;
+}
+
+.main {
+  background-color: yellow;
+}
+
+.article {
+  text-align: center;
+  margin: 0 auto;
+  width: 500px;
+  background-color: blue;
+  color: #fff;
+}
+
+.footer {
+  background-color: red;
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+```
+
+___Результат:___
+[Блочные и строчные элементы](https://codepen.io/g0dez/pen/VwpyQjR)
