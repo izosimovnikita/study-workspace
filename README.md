@@ -37,6 +37,10 @@ _Здесь публикуется всё, что связано с изучен
   - [Выпадение вертикальных отступов](#dropping-out-margin)
   - [Блочные и строчные элементы](#blocks-inlines)
   - [Единицы измерения](#units)
+    - [px](#px)
+    - [em](#em)
+    - [%](#percents)
+    - [rem](#rem)
 ---
 
 ### &#9776; HTML
@@ -691,7 +695,7 @@ ___Результат:___
 
 ___Пример:___
 ```html
-<p style="font-size: 20px;>
+<p style="font-size: 20px;">
   <a style="font-size: 20px">Ссылка</a>
 </p>
 ```
@@ -705,7 +709,7 @@ ___Пример:___
 
 ___Пример:___
 ```html
-<p style="font-size: 1.5em;>
+<p style="font-size: 1.5em;">
   <a style="font-size: 1.5em">Ссылка</a>
 </p>
 ```
@@ -719,7 +723,7 @@ ___Пример:___
 
 ___Пример:___
 ```html
-<p style="font-size: 250%;>
+<p style="font-size: 250%;">
   <a style="font-size: 250%">Ссылка</a>
 </p>
 ```
