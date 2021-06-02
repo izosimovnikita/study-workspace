@@ -1,0 +1,132 @@
+body {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+
+  font-family: Lobster, sans-serif;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  margin: 0;
+}
+
+/* Wrapper */
+.wrapper {
+  display: flex;
+}
+
+.wrapper p {
+  font-family: monospace;
+  font-size: 16px;
+  margin-left: 60px;
+  color: #5c5c5c;
+  font-weight: 700;
+}
+
+.checkbox {
+  position: relative;
+}
+
+.checkbox__input {
+  appearance: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.checkbox__label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+/* Рамка */
+.checkbox__label:before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  transition: all 0.1s ease-in-out;
+}
+
+/* Галочка */
+.checkbox__label:after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+
+  background: url("check.svg") no-repeat;
+  background-size: 11px 11px;
+  opacity: 0;
+
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 2;
+
+  transition: all 0.1s ease-in-out;
+}
+
+/* checked */
+.checkbox__input:checked + .checkbox__label:before {
+  background-color: #5ce44e;
+  border-color: #29af1b;
+}
+
+.checkbox__input:checked + .checkbox__label:after {
+  opacity: 1;
+}
+
+/* hover */
+.checkbox__input:hover + .checkbox__label:before {
+  border-color: #333;
+}
+
+/* disabled */
+.checkbox__input:disabled + .checkbox__label:before {
+  border-color: #c0c0c0;
+}
+
+.checkbox__input:disabled + .checkbox__label {
+  color: #c0c0c0;
+}
+
+/* disabled + checked */
+.checkbox__input:disabled:checked + .checkbox__label:after {
+  background-color: #c0c0c0;
+}
+
+.checkbox__input:disabled:checked + .checkbox__label:before {
+  background-color: #c0c0c0;
+}
+
+/* focus */
+.checkbox__input:focus + .checkbox__label:before {
+  border: 2px solid #333;
+}
