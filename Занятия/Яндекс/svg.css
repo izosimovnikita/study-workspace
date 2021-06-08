@@ -31,19 +31,17 @@
   opacity: 0.2;
 }
 
-.header__truck {
+.truck {
   width: 36px;
-  height: 36px;
+  height: 22px;
 
-  background: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.68 5.55H6.48l-.46-1.68a2.2 2.2 0 0 0-2.13-1.62H1.43a1.1 1.1 0 1 0 0 2.2H3.9l2.82 10.33a2.2 2.2 0 0 0 2.48 1.6l11.3-1.9a2.2 2.2 0 0 0 0.84-2.16V7.2c0-.91-.74-1.65-1.65-1.65zM5.83 22.05a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4zm11 0a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4z' fill='%23000'/%3E%3C/svg%3E")
-    no-repeat center 8px;
   opacity: 0.3;
   cursor: pointer;
 
   transition: opacity 0.1s linear;
 }
 
-.header__truck:hover {
+.truck:hover {
   opacity: 0.2;
 }
 
@@ -82,16 +80,6 @@
   height: 20px;
 }
 
-/* Traffic */
-.traffic__icon {
-  display: inline-block;
-  background-image: url("//yastatic.net/s3/home-static/_/W/6/3iKv0HwMyq3LM_iMXrpDbLZkM.svg");
-  width: 38px;
-  height: 35px;
-  background-size: 38px;
-  background-repeat: no-repeat;
-}
-
 /* Course */
 .dots {
   width: 15px;
@@ -106,4 +94,19 @@
 
 .dots:hover {
   fill: #000;
+}
+
+/* Search */
+.micro {
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+}
+
+.keyboard {
+  width: 30px;
+  height: 12px;
+
+  cursor: pointer;
 }
