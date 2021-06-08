@@ -25,19 +25,20 @@ input {
 }
 
 /* Wrapper */
-.wrapper {
+.box {
   display: flex;
 }
 
-.wrapper p {
+.box__title {
+  margin-left: 60px;
+
   font-family: monospace;
   font-size: 16px;
-  margin-left: 60px;
   color: #5c5c5c;
   font-weight: 700;
 }
 
-.checkbox {
+.box__checkbox {
   position: relative;
 }
 
@@ -48,10 +49,11 @@ input {
 }
 
 .checkbox__label {
+  padding-left: 25px;
+
   font-size: 15px;
   font-weight: 600;
   color: #333;
-  padding-left: 25px;
   cursor: pointer;
 }
 
@@ -62,35 +64,34 @@ input {
   width: 18px;
   height: 18px;
 
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  background-color: #fff;
-
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
 
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+
   transition: all 0.1s ease-in-out;
 }
 
 /* Галочка */
-.checkbox__label:after {
-  content: "";
-  display: block;
-  width: 11px;
-  height: 11px;
 
-  background: url("check.svg") no-repeat;
-  background-size: 11px 11px;
-  opacity: 0;
-
+.checkbox__check {
   position: absolute;
   top: 4px;
   left: 4px;
   z-index: 2;
 
-  transition: all 0.1s ease-in-out;
+  width: 11px;
+  height: 11px;
+
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+
+  transition: all 0.2s linear;
 }
 
 /* checked */
@@ -99,7 +100,7 @@ input {
   border-color: #29af1b;
 }
 
-.checkbox__input:checked + .checkbox__label:after {
+.checkbox__input:checked ~ .checkbox__check {
   opacity: 1;
 }
 
@@ -118,10 +119,6 @@ input {
 }
 
 /* disabled + checked */
-.checkbox__input:disabled:checked + .checkbox__label:after {
-  background-color: #c0c0c0;
-}
-
 .checkbox__input:disabled:checked + .checkbox__label:before {
   background-color: #c0c0c0;
 }
