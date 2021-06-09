@@ -51,6 +51,10 @@ body {
   color: #0054b9;
 }
 
+.link._secondary-color {
+  color: #6da2e1;
+}
+
 .link:hover {
   color: #c00;
 }
@@ -134,10 +138,6 @@ body {
 
 .news__link:first-child {
   margin-right: 10px;
-}
-
-.news__link._secondary-color {
-  color: #6da2e1;
 }
 
 .news__header,
@@ -230,13 +230,6 @@ body {
   font-weight: 500;
 }
 
-.weather__title._big {
-  font-size: 16px;
-}
-
-.weather__title._small {
-  font-size: 13px;
-}
 .weather__link + .weather__link {
   margin-left: 10px;
 }
