@@ -13,69 +13,74 @@
 		<div class="header__container">
 			<div class="header__info">
 				<a class="header__geo-link link" href="#">
-					<svg class="link__icon geolink">
+					<svg class="link__icon geo-icon">
 						<use xlink:href="sprite.svg#geo"></use>
 					</svg>
-					<span class="link__city">Москва</span>
+					<span class="link__text">Москва</span>
 				</a>
 				<time class="header__time" datetime="06-06-2021 11:18">6 июня, воскресенье 11:18</time>
 			</div>
-			<div class="header__icons">
-				<svg class="header__truck-icon truck">
-					<use xlink:href="sprite.svg#truck"></use>
-				</svg>
-				<svg class="header__bell-icon bell">
-					<use xlink:href="sprite.svg#bell"></use>
-				</svg>
+
+			<div class="header__stuffs">
+				<a href="#" class="header__link link">
+					<svg class="link__icon truck-icon">
+						<use xlink:href="sprite.svg#truck"></use>
+					</svg>
+				</a>
+				<a href="#" class="header__link link">
+					<svg class="link__icon bell-icon">
+						<use xlink:href="sprite.svg#bell"></use>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</header>
 	<main class="main">
 		<div class="container">
-			<section class="container__info info _row">
+			<section class="container__info info">
 				<div class="info__news news">
 					<div class="news__header">
-						<a class="news__link link _big _primary-color" href="#">Сейчас в СМИ</a>
-						<a class="news__link link _big _secondary-color" href="#">в Москве</a>
-						<svg class="news__dots-icon dots _hidden">
+						<a class="news__link link _main _primary" href="#">Сейчас в СМИ</a>
+						<a class="news__link link _main _secondary" href="#">в Москве</a>
+						<svg class="news__dots-icon dots-icon _hidden">
 							<use xlink:href="sprite.svg#dots-vert"></use>
 						</svg>
 					</div>
 
 					<div class="news__content">
-						<ul class="news__list">
-							<li class="news__item">
-								<a href="#" class="news__ref link">
-									<img class="link__fact-icon" src="/img/news1.png" alt="Новость 1">
-									<span class="link__fact">На новом памятнике Александру III нашли неправильный орден</span>
+						<ul class="news__list news-list">
+							<li class="news-list__item">
+								<a href="#" class="news-list__ref link">
+									<img class="link__icon news-icon" src="/img/news1.png" alt="Новость 1">
+									<span class="link__news">На новом памятнике Александру III нашли неправильный орден</span>
 								</a>
 							</li>
 
-							<li class="news__item">
-								<a href="#" class="news__ref link">
-									<img class="link__fact-icon" src="/img/news2.jpg" alt="Новость 2">
-									<span class="link__fact">В «Яндексе» рассказали о местных словах в разных регионах России</span>
+							<li class="news-list__item">
+								<a href="#" class="news-list__ref link">
+									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 2">
+									<span class="link__news">В «Яндексе» рассказали о местных словах в разных регионах России</span>
 								</a>
 							</li>
 
-							<li class="news__item">
-								<a href="#" class="news__ref link">
-									<img class="link__fact-icon" src="/img/news2.jpg" alt="Новость 3">
-									<span class="link__fact">Генсек НАТО заявил об обеспокоенности тесным сотрудничеством Москвы и Минска</span>
+							<li class="news-list__item">
+								<a href="#" class="news-list__ref link">
+									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 3">
+									<span class="link__news">Генсек НАТО заявил об обеспокоенности тесным сотрудничеством Москвы и Минска</span>
 								</a>
 							</li>
 
-							<li class="news__item">
-								<a href="#" class="news__ref link">
-									<img class="link__fact-icon" src="/img/news1.png" alt="Новость 4">
-									<span class="link__fact">МВД прописало правила скрытого надзора за дорожным движением</span>
+							<li class="news-list__item">
+								<a href="#" class="news-list__ref link">
+									<img class="link__icon news-icon" src="/img/news1.png" alt="Новость 4">
+									<span class="link__news">МВД прописало правила скрытого надзора за дорожным движением</span>
 								</a>
 							</li>
 
-							<li class="news__item">
-								<a href="#" class="news__ref link">
-									<img class="link__fact-icon" src="/img/news2.jpg" alt="Новость 5">
-									<span class="link__fact">В США не исключили использование Россией безответного ядерного удара</span>
+							<li class="news-list__item">
+								<a href="#" class="news-list__ref link">
+									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 5">
+									<span class="link__news">В США не исключили использование Россией безответного ядерного удара</span>
 								</a>
 							</li>
 						</ul>
@@ -100,74 +105,76 @@
 							<span class="course__diff">+0,38%</span>
 						</span>
 
-						<svg class="course__icon dots">
+						<svg class="course__icon dots-icon">
 							<use xlink:href="sprite.svg#dots"></use>
 						</svg>
 					</div>
 				</div>
 
 				<div class="info__circs circs">
-					<div class="circs__weather weather">
-						<div class="weather__header">
-							<a class="weather__title link _big _primary-color" href="#">Погода</a>
-							<a class="weather__title link _small _primary-color" href="#">Карта осадков</a>
-							<svg class="weather__dots-icon dots _hidden">
+					<div class="circs__widget widget">
+						<div class="widget__header">
+							<a class="widget__title link _main _primary" href="#">Погода</a>
+							<a class="widget__title link _extra _primary" href="#">Карта осадков</a>
+							<svg class="widget__dots-icon dots-icon _hidden">
 								<use xlink:href="sprite.svg#dots-vert"></use>
 							</svg>
 						</div>
 
-						<div class="weather__info">
-							<a class="weather__link link _alignment" href="#">
-								<div class="link__weather-icon current"></div>
+						<div class="widget__info">
+							<a class="widget__link link _alignment" href="#">
+								<span class="link__icon current-icon"></span>
 								<span class="link__temp _large">+22°</span>
 							</a>
 
-							<a class="weather__link link" href="#">
+							<a class="widget__link link" href="#">
 								<span class="link__desc">Днём</span>
-								<div class="link__box _alignment">
-									<span class="link__weather-icon afternoon"></span>
+								<div class="link__box">
+									<span class="link__icon afternoon-icon"></span>
 									<span class="link__temp">23°</span>
 								</div>
 							</a>
 
-							<a class="weather__link link" href="#">
+							<a class="widget__link link" href="#">
 								<span class="link__desc">Вечером</span>
-								<div class="link__box _alignment">
-									<span class="link__weather-icon evening"></span>
+								<div class="link__box">
+									<span class="link__icon evening-icon"></span>
 									<span class="link__temp">19°</span>
 								</div>
 							</a>
 
-							<a class="weather__link link" href="#">
+							<a class="widget__link link" href="#">
 								<span class="link__desc">Ночью</span>
-								<div class="link__box _alignment">
-									<span class="link__weather-icon night"></span>
+								<div class="link__box">
+									<span class="link__icon night-icon"></span>
 									<span class="link__temp">15°</span>
 								</div>
 							</a>
 						</div>
 					</div>
 
-					<div class="circs__traffic traffic _pointed">
-						<div class="traffic__header">
-							<a href="#" class="traffic__link link _big _primary-color">Пробки</a>
-							<a href="#" class="traffic__link link _small _primary-color">Метро</a>
-							<a href="#" class="traffic__link link _small _primary-color">Расписание</a>
-							<a href="#" class="traffic__link link _small _primary-color">Такси</a>
-							<svg class="traffic__dots-icon dots _hidden">
+					<div class="circs__widget widget">
+						<div class="widget__header">
+							<a href="#" class="widget__link link _main _primary">Пробки</a>
+							<a href="#" class="widget__link link _extra _primary">Метро</a>
+							<a href="#" class="widget__link link _extra _primary">Расписание</a>
+							<a href="#" class="widget__link link _extra _primary">Такси</a>
+							<svg class="widget__dots-icon dots-icon _hidden">
 								<use xlink:href="sprite.svg#dots-vert"></use>
 							</svg>
 						</div>
 
-						<div class="traffic__content">
-							<a href="#" class="traffic__rate link">
-								<svg class="link__traffic-icon">
+						<div class="widget__info">
+							<a href="#" class="widget__link link _alignment">
+								<svg class="link__icon traffic-icon">
 									<use xlink:href="sprite.svg#traffic"></use>
 								</svg>
-								<span class="link__rate-text">1</span>
+								<span class="link__rate">1</span>
 							</a>
 
-							<a href="#" class="traffic__text link _small">До 16ч. дороги свободны</a>
+							<a href="#" class="widget__text link _extra">
+								<span class="link__text">До 16ч. дороги свободны</span>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -175,76 +182,76 @@
 
 			<section class="container__services services">
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/1.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Аренда</div>
+					<img src="/img/services/1.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Аренда</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/2.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Маркет</div>
+					<img src="/img/services/2.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Маркет</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/3.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Видео</div>
+					<img src="/img/services/3.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Видео</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/4.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Картинки</div>
+					<img src="/img/services/4.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Картинки</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/5.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Новости</div>
+					<img src="/img/services/5.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Новости</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/6.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Карты</div>
+					<img src="/img/services/6.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Карты</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/7.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Переводчик</div>
+					<img src="/img/services/7.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Переводчик</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/8.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Музыка</div>
+					<img src="/img/services/8.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Музыка</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<img src="/img/services/9.svg" class="link__services-icon" alt="promo">
-					<div class="link__title">Программа</div>
+					<img src="/img/services/9.svg" class="link__icon service-icon" alt="promo">
+					<div class="link__text service-text">Программа</div>
 				</a>
 
 				<a href="#" class="services__item-link link">
 					<div class="link__more-box">
-						<img src="/img/services/box1.svg" class="link__more-icon" alt="promo">
-						<img src="/img/services/box2.svg" class="link__more-icon" alt="promo">
-						<img src="/img/services/box3.svg" class="link__more-icon" alt="promo">
-						<img src="/img/services/box4.svg" class="link__more-icon" alt="promo">
+						<img src="/img/services/box1.svg" class="link__icon more-icon" alt="promo">
+						<img src="/img/services/box2.svg" class="link__icon more-icon" alt="promo">
+						<img src="/img/services/box3.svg" class="link__icon more-icon" alt="promo">
+						<img src="/img/services/box4.svg" class="link__icon more-icon" alt="promo">
 					</div>
 
-					<div class="link__title">еще</div>
+					<div class="link__text service-text">еще</div>
 				</a>
 			</section>
 
 			<section class="container__search search">
 				<div class="search__logo logo">
-					<a href="#" class="logo__link">
-						<img class="logo__img" src="/img/logo.svg" alt="Яндекс">
+					<a href="#" class="logo__link link">
+						<img class="link__icon logo-img" src="/img/logo.svg" alt="Яндекс">
 					</a>
 				</div>
 
-				<form action="">
+				<form class="search__form" action="">
 					<div class="search__container">
-						<div class="search__icons">
-							<svg class="search__icon micro">
+						<div class="search__actions">
+							<svg class="search__icon micro-icon">
 								<use xlink:href="sprite.svg#micro"></use>
 							</svg>
-							<svg class="search__icon keyboard">
+							<svg class="search__icon keyboard-icon">
 								<use xlink:href="sprite.svg#keyboard"></use>
 							</svg>
 						</div>
@@ -255,22 +262,22 @@
 				</form>
 
 				<div class="search__download">
-					<a href="#" class="search__text link _small">Скачайте Яндекс.Браузер</a>
+					<a href="#" class="search__text link _extra">Скачайте Яндекс.Браузер</a>
 				</div>
 			</section>
 
 			<section class="container__advert advert">
-				<a href="#" class="advert__ref">
-					<div class="advert__image"></div>
+				<a href="#" class="advert__link link">
+					<div class="link__image"></div>
 
-					<span class="advert__inscription">Реклама</span>
+					<span class="link__inscription">Реклама</span>
 
-					<div class="advert__content">
-						<div class="advert__title">Курс "Специалист по Data Science"</div>
-						<div class="advert__desc">Подробнее на praktikum.yandex.ru</div>
+					<div class="link__text-content">
+						<div class="link__title">Курс "Специалист по Data Science"</div>
+						<div class="link__details">Подробнее на praktikum.yandex.ru</div>
 					</div>
 
-					<svg class="advert__cross cross-icon" title="Закрыть объявление">
+					<svg class="link__icon cross-icon">
 						<use xlink:href="sprite.svg#cross"></use>
 					</svg>
 				</a>
@@ -278,66 +285,64 @@
 		</div>
 	</main>
 
-
 	<aside class="cards _right-upper">
-		<div class="cards__person-data card">
-			<a href="#" class="card__enter login">
-				<svg class="login__icon">
+		<div class="cards__login card _card-default">
+			<a href="#" class="card__link link _theme-dark">
+				<svg class="link__icon card-icon">
 					<use xlink:href="sprite.svg#yandex-icon"></use>
 				</svg>
-				<span class="login__text">Войти</span>
+				<span class="link__card-text">Войти</span>
 			</a>
 
-			<a href="#" class="card__add login">
-				<svg class="login__icon">
+			<a href="#" class="card__link link">
+				<svg class="link__icon card-icon">
 					<use xlink:href="sprite.svg#inbox"></use>
 				</svg>
-				<span class="login__add-text">Почта</span>
+				<span class="link__add-text">Почта</span>
 			</a>
 
-			<a href="#" class="card__add login">
-				<svg class="login__icon">
+			<a href="#" class="card__link link">
+				<svg class="link__icon card-icon">
 					<use xlink:href="sprite.svg#yandex-disk"></use>
 				</svg>
-				<span class="login__add-text">Диск</span>
+				<span class="link__add-text">Диск</span>
 			</a>
 		</div>
 
-		<div class="cards__yandex-plus card _shifted">
-			<a href="#" class="card__plus login">
-				<img class="login__icon" src="/img/yandex-plus.svg" alt="Яндекс Плюс">
-				<span class="login__add-text">Попробовать Плюс</span>
+		<div class="cards__plus card _card-default _shifted">
+			<a href="#" class="card__link link">
+				<img class="link__icon card-icon" src="/img/yandex-plus.svg" alt="Яндекс Плюс">
+				<span class="link__add-text">Попробовать Плюс</span>
 			</a>
 		</div>
 
 		<div class="cards__box _shifted">
-			<div class="cards__covid-news card">
-				<a href="#" class="card__covid">
-					<span class="card__title">Коронавирус в России</span>
+			<div class="cards__covid card _card-default">
+				<a href="#" class="card__covid-link link">
+					<span class="link__content">Коронавирус в России</span>
 
-					<div class="card__content">
-						<span class="card__text">
-							<span class="card__covid-value">+9145</span>
+					<div class="link__statistics">
+						<span class="link__info">
+							<span class="link__covid-value">+9145</span>
 							выявлено
 						</span>
 
-						<svg class="card__covid-icon">
+						<svg class="link__icon covid-icon">
 							<use xlink:href="sprite.svg#covid-histogram"></use>
 						</svg>
 					</div>
 				</a>
 
-				<div class="switcher">
+				<div class="card__switcher switcher">
 					<div class="switcher__dot"></div>
 					<div class="switcher__dot"></div>
 				</div>
 			</div>
 
-			<svg class="card__cross cross-icon" title="Закрыть объявление">
+			<svg class="cards__cross" title="Закрыть объявление">
 				<use xlink:href="sprite.svg#cross"></use>
 			</svg>
 		</div>
-
 	</aside>
 
 </body>
