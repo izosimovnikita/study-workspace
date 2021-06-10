@@ -7,6 +7,8 @@
 
 a {
   text-decoration: none;
+
+  color: #000;
 }
 
 ul {
@@ -25,7 +27,7 @@ body {
 }
 
 /* Logo */
-.logo__img {
+.logo-img {
   display: block;
   position: absolute;
   top: -36px;
@@ -33,7 +35,7 @@ body {
 }
 
 /* Hidden */
-.dots._hidden {
+.dots-icon._hidden {
   opacity: 0;
 
   transition: opacity 0.2s linear;
@@ -47,24 +49,103 @@ body {
   transition: color 0.2s linear;
 }
 
-.link._primary-color {
+.link._primary {
   color: #0054b9;
 }
 
-.link._secondary-color {
+.link._secondary {
   color: #6da2e1;
+}
+
+.link._theme-dark {
+  background-color: #f0f0f0;
+}
+
+.link._alignment {
+  display: flex;
+  align-items: center;
 }
 
 .link:hover {
   color: #c00;
 }
 
-.link._big {
+.link._main {
   font-size: 16px;
 }
 
-.link._small {
+.link._extra {
   font-size: 13px;
+}
+
+.link__icon {
+  cursor: pointer;
+
+  transition: fill 0.2s linear, opacity 0.2s linear;
+}
+
+/* Svg */
+.geo-icon {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+
+  margin-right: 8px;
+
+  fill: #90919d;
+  vertical-align: middle;
+}
+
+.truck-icon {
+  width: 36px;
+  height: 22px;
+
+  opacity: 0.3;
+}
+
+.bell-icon {
+  width: 36px;
+  height: 36px;
+
+  opacity: 0.3;
+}
+
+.truck-icon:hover,
+.bell-icon:hover {
+  opacity: 0.2;
+}
+
+.dots-icon {
+  width: 14px;
+  height: 14px;
+
+  vertical-align: middle;
+  cursor: pointer;
+
+  fill: #999;
+
+  transition: fill 0.2s linear;
+}
+
+.dots-icon:hover {
+  fill: #000;
+}
+
+.traffic-icon {
+  width: 38px;
+  height: 35px;
+}
+
+.micro-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.keyboard-icon {
+  width: 27px;
+  height: 12px;
 }
 
 /* Container */
@@ -102,15 +183,15 @@ body {
   color: #90919d;
 }
 
-.header__geo-link:hover .link__city {
+.header__geo-link:hover {
   color: #c00;
 }
 
-.header__geo-link:hover .geolink {
+.header__geo-link:hover .geo-icon {
   fill: #c00;
 }
 
-.header__icons {
+.header__stuffs {
   display: flex;
   align-items: center;
 
@@ -127,7 +208,7 @@ body {
 }
 
 /* Info */
-.info._row {
+.container__info {
   display: flex;
 }
 
@@ -142,30 +223,24 @@ body {
 
 .news__header,
 .news__content,
-.news__item:not(:last-child) {
+.news-list__item:not(:last-child) {
   margin-bottom: 8px;
 }
 
-.news__item {
+.news-list__item {
   display: flex;
 }
 
-.news__ref {
+.news-list__ref {
   display: flex;
-}
-
-.link__fact {
-  font-size: 13px;
   color: #000;
-
-  transition: color 0.2s linear;
 }
 
-.news__item:hover .link__fact {
-  color: #c00;
+.link__news {
+  font-size: 13px;
 }
 
-.link__fact-icon {
+.news-icon {
   width: 14px;
   height: 14px;
 
@@ -212,36 +287,54 @@ body {
   color: #999;
 }
 
-/* Weather */
-.circs__weather {
+/* Widget */
+.circs__widget {
   padding-left: 13px;
+  margin-bottom: 18px;
 }
 
-.circs__weather:hover .weather__dots-icon._hidden {
+.circs__widget:hover .widget__dots-icon._hidden {
   opacity: 1;
 }
 
-.weather__header {
+.widget__header {
   margin-bottom: 8px;
 }
 
-.weather__title:first-child {
-  margin-right: 10px;
+.widget__title:first-child {
   font-weight: 500;
 }
 
-.weather__link + .weather__link {
+.widget__title + .widget__title {
   margin-left: 10px;
 }
 
-.weather__link:hover .link__temp {
+.widget__link + .widget__link {
+  margin-left: 10px;
+}
+
+.widget__info {
+  display: flex;
+  align-items: center;
+}
+
+.widget__link:hover .link__rate {
   color: #c00;
 }
 
-.weather__info {
-  display: flex;
+.widget__text {
+  padding-left: 14px;
 
-  margin-bottom: 18px;
+  color: #000;
+}
+
+.link__rate {
+  padding-left: 13px;
+
+  font-size: 26px;
+  color: #000;
+
+  transition: color 0.2s linear;
 }
 
 .link__desc {
@@ -252,88 +345,17 @@ body {
   color: #90919d;
 }
 
-.link__box._alignment {
+.link__box {
   display: flex;
   align-items: center;
 }
 
 .link__temp {
   font-size: 12px;
-  color: #000;
-
-  transition: color 0.2s linear;
-}
-
-.link__weather-icon {
-  display: inline-block;
 }
 
 .link__temp._large {
   font-size: 26px;
-}
-
-.weather__link._alignment {
-  display: flex;
-  align-items: center;
-}
-
-/* Traffic */
-.circs__traffic:hover .traffic__dots-icon._hidden {
-  opacity: 1;
-}
-
-.circs__traffic {
-  padding-left: 13px;
-}
-
-.link__traffic-icon {
-  width: 38px;
-  height: 35px;
-}
-
-.traffic__header {
-  margin-bottom: 8px;
-}
-
-.traffic__link:first-child {
-  font-weight: 500;
-}
-
-.traffic__link:not(:first-child) {
-  margin-left: 10px;
-}
-
-.traffic__content {
-  display: flex;
-  align-items: center;
-}
-
-.traffic__rate {
-  display: flex;
-  align-items: center;
-
-  margin-right: 10px;
-}
-
-.traffic__rate:hover .link__rate-text {
-  color: #c00;
-}
-
-.link__rate-text {
-  padding-left: 13px;
-
-  font-size: 26px;
-  color: #000;
-
-  transition: color 0.2s linear;
-}
-
-.traffic__text {
-  padding-left: 3px;
-
-  color: #000;
-
-  transition: color 0.2s linear;
 }
 
 /* Services */
@@ -355,11 +377,11 @@ body {
   transition: color 0.2s linear;
 }
 
-.services__item-link:hover .link__title {
+.services__item-link:hover .service-text {
   color: #c00;
 }
 
-.link__services-icon {
+.service-icon {
   display: block;
   width: 44px;
   height: 44px;
@@ -369,19 +391,19 @@ body {
   transition: transform 0.1s linear;
 }
 
-.link__more-icon {
+.more-icon {
   width: 18px;
   height: 18px;
 
   transition: transform 0.1s linear;
 }
 
-.services__item-link:hover .link__services-icon,
-.services__item-link:hover .link__more-icon {
+.services__item-link:hover .service-icon,
+.services__item-link:hover .more-icon {
   transform: translateY(-10%);
 }
 
-.link__title {
+.service-text {
   font-size: 12px;
   color: #000;
 }
@@ -473,7 +495,7 @@ body {
   color: #000;
 }
 
-.search__icons {
+.search__actions {
   position: absolute;
   top: 8px;
   right: 91px;
@@ -485,6 +507,8 @@ body {
 
 .search__icon {
   opacity: 0.2;
+
+  cursor: pointer;
 
   transition: opacity 0.2s linear;
 }
@@ -505,7 +529,7 @@ body {
   border: 1px solid #ccc;
 }
 
-.advert__title {
+.link__title {
   font-size: 24px;
   font-weight: 400;
   color: #000;
@@ -513,23 +537,23 @@ body {
   transition: color 0.2s linear;
 }
 
-.advert__desc {
+.link__details {
   font-size: 14px;
   font-weight: 400;
   color: #999;
 }
 
-.container__advert:hover .advert__title {
+.container__advert:hover .link__title {
   color: #c00;
 }
 
-.advert__ref {
+.advert__link {
   position: relative;
   display: flex;
   height: 100%;
 }
 
-.advert__image {
+.link__image {
   background: url("https://yastatic.net/www/_/O1M3pj157/f169beb3CeL/hAS0GJ_SjB4tydGUKN4uuqnsXxm5TxRDhtR2lEDAjh1QX6fXVnikVUTvlnkMs6Dc7mHFQvj1vv806ntwCdwh2xEVu5PTSUfQ4tbdnaEUqbz-qt4ZqM4GhRTQex8")
     no-repeat;
   background-size: cover;
@@ -538,14 +562,12 @@ body {
   width: 35%;
 }
 
-.advert__inscription {
+.link__inscription {
   position: absolute;
   top: 0;
   left: 0;
 
   padding: 4px 6px 3px 6px;
-  border: 1px solid #e7e7e7;
-  /* border-top-left-radius: 4px; */
   border-bottom-right-radius: 4px;
 
   font-size: 10px;
@@ -553,7 +575,7 @@ body {
   color: #000;
 }
 
-.advert__content {
+.link__text-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -564,7 +586,7 @@ body {
   padding-left: 15px;
 }
 
-.advert__cross {
+.cross-icon {
   width: 18px;
   height: 18px;
 }
@@ -577,12 +599,13 @@ body {
   z-index: 4;
 }
 
-.card {
-  width: 180px;
+.cards__box {
+  position: relative;
 
-  margin-top: 8px;
-  margin-right: 8px;
-  padding: 5px;
+  transition: transform 0.2s linear;
+}
+
+.card {
   border-radius: 8px;
 
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.08);
@@ -591,48 +614,52 @@ body {
   transition: transform 0.15s linear;
 }
 
+.card._card-default {
+  width: 180px;
+
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
 .card._shifted:hover {
   transform: translateX(-20px);
 }
 
-.cards__person-data {
+.cards__login {
   height: 132px;
+
+  padding: 5px;
 }
 
-.card__enter {
+.cards__login .link__add-text:hover {
+  color: #c00;
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+
   height: 40px;
 
   margin-bottom: 4px;
   border-radius: 7px;
+  padding: 0 8px;
 
-  background-color: #f0f0f0;
+  text-align: center;
 
   transition: background-color 0.2s linear;
 }
 
-.card__enter:hover {
+.card__link._theme-dark:hover {
   background-color: #e4e4e4;
 }
 
-.login {
-  display: flex;
-  align-items: center;
-
-  padding: 0 8px;
-
-  text-align: center;
-}
-
-.card__add {
-  height: 36px;
-}
-
-.login__icon {
+.card-icon {
   width: 24px;
   height: 24px;
 }
 
-.login__text {
+.link__card-text {
   flex-grow: 1;
 
   margin-left: -20px;
@@ -642,7 +669,7 @@ body {
   color: #000;
 }
 
-.login__add-text {
+.link__add-text {
   padding-left: 8px;
 
   font-weight: 400;
@@ -652,15 +679,11 @@ body {
   transition: color 0.2s linear;
 }
 
-.card__add:hover .login__add-text {
-  color: #c00;
-}
-
 .card__plus {
-  height: 100%;
+  height: 40px;
 }
 
-.cards__covid-news {
+.cards__covid {
   position: relative;
 
   padding: 12px 14px;
@@ -668,7 +691,7 @@ body {
   cursor: pointer;
 }
 
-.card__title {
+.link__content {
   display: block;
   margin-bottom: 7px;
 
@@ -677,27 +700,27 @@ body {
   color: #000;
 }
 
-.card__content {
+.link__statistics {
   display: flex;
   justify-content: space-between;
 }
 
-.card__text {
+.link__info {
   font-size: 12px;
   color: #000;
 }
 
-.card__covid-value {
+.link__covid-value {
   font-weight: 700;
 }
 
-.card__covid-icon {
+.covid-icon {
   height: 14px;
   width: 41px;
 }
 
 /* Switcher */
-.switcher {
+.card__switcher {
   display: flex;
   justify-content: space-between;
 
@@ -709,13 +732,7 @@ body {
   padding: 7px;
 }
 
-.cards__box {
-  position: relative;
-
-  transition: transform 0.2s linear;
-}
-
-.cards__box._shifted:hover .cards__covid-news {
+.cards__box._shifted:hover .cards__covid {
   transform: translateX(-20px);
 }
 
@@ -734,13 +751,7 @@ body {
   opacity: 1;
 }
 
-.cross-icon {
-  cursor: pointer;
-
-  transition: opacity 0.1s linear;
-}
-
-.card__cross {
+.cards__cross {
   position: absolute;
   top: 10px;
   right: 3px;
@@ -749,16 +760,17 @@ body {
   width: 24px;
   height: 24px;
 
+  cursor: pointer;
+  fill: #999;
+
   opacity: 0;
 }
 
-.card__cross:hover {
-  fill: #999;
+.cards__cross:hover {
+  fill: #000;
 }
 
-.cards__box:hover .card__cross {
+.cards__box:hover .cards__cross {
   opacity: 1;
   transition-delay: 0.4s;
 }
-
-/* Media */
