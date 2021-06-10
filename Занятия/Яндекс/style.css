@@ -78,7 +78,7 @@ ul {
   font-size: 13px;
 }
 
-.link__icon {
+.link-box__icon {
   cursor: pointer;
 
   transition: fill 0.2s linear, opacity 0.2s linear;
@@ -157,7 +157,7 @@ ul {
 }
 
 /* Header */
-.header__container {
+.header__wrapper {
   display: flex;
   justify-content: space-between;
 
@@ -166,7 +166,7 @@ ul {
   padding-left: 18px;
 }
 
-.header__info {
+.wrapper__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -174,7 +174,7 @@ ul {
   width: 240px;
 }
 
-.header__geo-link {
+.header-content__geo-link {
   display: flex;
   align-items: baseline;
 
@@ -183,11 +183,11 @@ ul {
   color: #90919d;
 }
 
-.header__geo-link:hover {
+.header-content__geo-link:hover {
   color: #c00;
 }
 
-.header__geo-link:hover .geo-icon {
+.header-content__geo-link:hover .geo-icon {
   fill: #c00;
 }
 
@@ -200,7 +200,7 @@ ul {
   left: -9px;
 }
 
-.header__time {
+.content__time {
   font-family: Verdana;
   font-size: 11px;
   font-weight: 400;
@@ -231,7 +231,7 @@ ul {
   display: flex;
 }
 
-.news-list__ref {
+.news-item__ref {
   display: flex;
   color: #000;
 }
@@ -264,7 +264,7 @@ ul {
   margin-right: 8px;
 }
 
-.course__valuta {
+.course-item__valuta {
   margin-right: 6px;
 
   font-weight: 500;
@@ -274,7 +274,7 @@ ul {
   transition: color 0.2s linear;
 }
 
-.course__value {
+.course-item__value {
   margin-right: 4px;
 
   font-weight: 400;
@@ -282,7 +282,7 @@ ul {
   color: #000;
 }
 
-.course__diff {
+.course-item__diff {
   font-size: 12px;
   color: #90919d;
 }
@@ -293,7 +293,7 @@ ul {
   margin-bottom: 18px;
 }
 
-.circs__widget:hover .widget__dots-icon._hidden {
+.circs__widget:hover .widghet-header__dots-icon._hidden {
   opacity: 1;
 }
 
@@ -301,28 +301,28 @@ ul {
   margin-bottom: 8px;
 }
 
-.widget__title:first-child {
+.widget-header__title:first-child {
   font-weight: 500;
 }
 
-.widget__title + .widget__title {
+.widget-header__title + .widget-header__title {
   margin-left: 10px;
 }
 
-.widget__link + .widget__link {
+.widget-content__link + .widget-content__link {
   margin-left: 10px;
 }
 
-.widget__info {
+.widget__content {
   display: flex;
   align-items: center;
 }
 
-.widget__link:hover .link__rate {
+.widget-content__link:hover .link__rate {
   color: #c00;
 }
 
-.widget__text {
+.widget-content__text {
   padding-left: 14px;
 
   color: #000;
@@ -350,7 +350,7 @@ ul {
   align-items: center;
 }
 
-.link__temp {
+.link-box__temp {
   font-size: 12px;
 }
 
@@ -408,7 +408,7 @@ ul {
   color: #000;
 }
 
-.link__more-box {
+.link__more {
   display: flex;
   flex-wrap: wrap;
 
@@ -438,12 +438,12 @@ ul {
   position: relative;
 }
 
-.search__container {
+.search-form__container {
   position: relative;
   display: flex;
 }
 
-.search__input {
+.input-container__input {
   display: inline-block;
   width: calc(100% - 70px);
   height: 40px;
@@ -458,18 +458,18 @@ ul {
   outline: none;
 }
 
-.search__input::placeholder {
+.input-container__input::placeholder {
   font-size: 16px;
   font-family: "YS Text", Verdana;
   font-weight: 400;
   opacity: 0.6;
 }
 
-.search__input:focus::placeholder {
+.input-container__input:focus::placeholder {
   opacity: 0;
 }
 
-.search__button {
+.input-container__button {
   width: 83px;
   height: 40px;
 
@@ -490,13 +490,13 @@ ul {
   text-align: right;
 }
 
-.search__text {
+.download__link {
   margin-right: 13px;
 
   color: #000;
 }
 
-.search__actions {
+.input-container__actions {
   position: absolute;
   top: 8px;
   right: 91px;
@@ -506,7 +506,7 @@ ul {
   justify-content: space-between;
 }
 
-.search__icon {
+.actions__icon {
   opacity: 0.2;
 
   cursor: pointer;
@@ -514,11 +514,11 @@ ul {
   transition: opacity 0.2s linear;
 }
 
-.search__icon:first-child {
+.actions__icon:first-child {
   margin-right: 10px;
 }
 
-.search__icon:hover {
+.actions__icon:hover {
   opacity: 0.35;
 }
 
@@ -530,7 +530,7 @@ ul {
   border: 1px solid #90919d;
 }
 
-.link__title {
+.text-content__title {
   font-size: 24px;
   font-weight: 400;
   color: #000;
@@ -576,7 +576,7 @@ ul {
   color: #000;
 }
 
-.link__text-content {
+.link__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -683,7 +683,7 @@ ul {
   height: 40px;
 }
 
-.cards__covid {
+.cards-box__covid {
   position: relative;
 
   padding: 12px 14px;
@@ -691,7 +691,7 @@ ul {
   cursor: pointer;
 }
 
-.link__content {
+.link__subtitle {
   display: block;
   margin-bottom: 7px;
 
@@ -705,12 +705,12 @@ ul {
   justify-content: space-between;
 }
 
-.link__info {
+.statistics__info {
   font-size: 12px;
   color: #000;
 }
 
-.link__covid-value {
+.info-value__covid-value {
   font-weight: 700;
 }
 
@@ -732,7 +732,7 @@ ul {
   padding: 7px;
 }
 
-.cards__box._shifted:hover .cards__covid {
+.cards__box._shifted:hover .cards-box__covid {
   transform: translateX(-20px);
 }
 
