@@ -10,24 +10,24 @@
 <body class="app">
 
 	<header class="app__header header">
-		<div class="header__container">
-			<div class="header__info">
-				<a class="header__geo-link link" href="#">
+		<div class="header__wrapper wrapper">
+			<div class="wrapper__content header-content">
+				<a class="header-content__geo-link link" href="#">
 					<svg class="link__icon geo-icon">
 						<use xlink:href="sprite.svg#geo"></use>
 					</svg>
 					<span class="link__text">Москва</span>
 				</a>
-				<time class="header__time" datetime="06-06-2021 11:18">6 июня, воскресенье 11:18</time>
+				<time class="content__time" datetime="06-06-2021 11:18">6 июня, воскресенье 11:18</time>
 			</div>
 
-			<div class="header__stuffs">
-				<a href="#" class="header__link link">
+			<div class="header__stuffs stuffs">
+				<a href="#" class="stuffs__link link">
 					<svg class="link__icon truck-icon">
 						<use xlink:href="sprite.svg#truck"></use>
 					</svg>
 				</a>
-				<a href="#" class="header__link link">
+				<a href="#" class="stuffs__link link">
 					<svg class="link__icon bell-icon">
 						<use xlink:href="sprite.svg#bell"></use>
 					</svg>
@@ -47,38 +47,38 @@
 						</svg>
 					</div>
 
-					<div class="news__content">
-						<ul class="news__list news-list">
-							<li class="news-list__item">
-								<a href="#" class="news-list__ref link">
+					<div class="news__content news-content">
+						<ul class="news-content__list news-list">
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
 									<img class="link__icon news-icon" src="/img/news1.png" alt="Новость 1">
 									<span class="link__news">На новом памятнике Александру III нашли неправильный орден</span>
 								</a>
 							</li>
 
-							<li class="news-list__item">
-								<a href="#" class="news-list__ref link">
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
 									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 2">
 									<span class="link__news">В «Яндексе» рассказали о местных словах в разных регионах России</span>
 								</a>
 							</li>
 
-							<li class="news-list__item">
-								<a href="#" class="news-list__ref link">
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
 									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 3">
 									<span class="link__news">Генсек НАТО заявил об обеспокоенности тесным сотрудничеством Москвы и Минска</span>
 								</a>
 							</li>
 
-							<li class="news-list__item">
-								<a href="#" class="news-list__ref link">
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
 									<img class="link__icon news-icon" src="/img/news1.png" alt="Новость 4">
 									<span class="link__news">МВД прописало правила скрытого надзора за дорожным движением</span>
 								</a>
 							</li>
 
-							<li class="news-list__item">
-								<a href="#" class="news-list__ref link">
+							<li class="news-list__item news-item">
+								<a href="#" class="news-item__ref link">
 									<img class="link__icon news-icon" src="/img/news2.jpg" alt="Новость 5">
 									<span class="link__news">В США не исключили использование Россией безответного ядерного удара</span>
 								</a>
@@ -87,22 +87,22 @@
 					</div>
 
 					<div class="news__course course">
-						<span class="course__item">
-							<a href="#" class="course__valuta link">USD</a>
-							<span class="course__value">72,80</span>
-							<span class="course__diff">−0,45</span>
+						<span class="course__item course-item">
+							<a href="#" class="course-item__valuta link">USD</a>
+							<span class="course-item__value">72,80</span>
+							<span class="course-item__diff">−0,45</span>
 						</span>
 
 						<span class="course__item">
-							<a href="#" class="course__valuta link">EUR</a>
-							<span class="course__value">88,55</span>
-							<span class="course__diff">−0,30</span>
+							<a href="#" class="course-item__valuta link">EUR</a>
+							<span class="course-item__value">88,55</span>
+							<span class="course-item__diff">−0,30</span>
 						</span>
 
 						<span class="course__item">
-							<a href="#" class="course__valuta link">НЕФТЬ</a>
-							<span class="course__value">71,69</span>
-							<span class="course__diff">+0,38%</span>
+							<a href="#" class="course-item__valuta link">НЕФТЬ</a>
+							<span class="course-item__value">71,69</span>
+							<span class="course-item__diff">+0,38%</span>
 						</span>
 
 						<svg class="course__icon dots-icon">
@@ -113,66 +113,66 @@
 
 				<div class="info__circs circs">
 					<div class="circs__widget widget">
-						<div class="widget__header">
-							<a class="widget__title link _main _primary" href="#">Погода</a>
-							<a class="widget__title link _extra _primary" href="#">Карта осадков</a>
-							<svg class="widget__dots-icon dots-icon _hidden">
+						<div class="widget__header widghet-header">
+							<a class="widget-header__title link _main _primary" href="#">Погода</a>
+							<a class="widghet-header__title link _extra _primary" href="#">Карта осадков</a>
+							<svg class="widghet-header__dots-icon dots-icon _hidden">
 								<use xlink:href="sprite.svg#dots-vert"></use>
 							</svg>
 						</div>
 
-						<div class="widget__info">
-							<a class="widget__link link _alignment" href="#">
+						<div class="widget__content widget-content">
+							<a class="widget-content__link link _alignment" href="#">
 								<span class="link__icon current-icon"></span>
 								<span class="link__temp _large">+22°</span>
 							</a>
 
-							<a class="widget__link link" href="#">
+							<a class="widget-content__link link" href="#">
 								<span class="link__desc">Днём</span>
-								<div class="link__box">
-									<span class="link__icon afternoon-icon"></span>
-									<span class="link__temp">23°</span>
+								<div class="link__box link-box">
+									<span class="link-box__icon afternoon-icon"></span>
+									<span class="link-box__temp">23°</span>
 								</div>
 							</a>
 
-							<a class="widget__link link" href="#">
+							<a class="widget-content__link link" href="#">
 								<span class="link__desc">Вечером</span>
-								<div class="link__box">
-									<span class="link__icon evening-icon"></span>
-									<span class="link__temp">19°</span>
+								<div class="link__box link-box">
+									<span class="link-box__icon evening-icon"></span>
+									<span class="link-box__temp">19°</span>
 								</div>
 							</a>
 
-							<a class="widget__link link" href="#">
+							<a class="widget-content__link link" href="#">
 								<span class="link__desc">Ночью</span>
-								<div class="link__box">
-									<span class="link__icon night-icon"></span>
-									<span class="link__temp">15°</span>
+								<div class="link__box link-box">
+									<span class="link-box__icon night-icon"></span>
+									<span class="link-box__temp">15°</span>
 								</div>
 							</a>
 						</div>
 					</div>
 
 					<div class="circs__widget widget">
-						<div class="widget__header">
-							<a href="#" class="widget__link link _main _primary">Пробки</a>
-							<a href="#" class="widget__link link _extra _primary">Метро</a>
-							<a href="#" class="widget__link link _extra _primary">Расписание</a>
-							<a href="#" class="widget__link link _extra _primary">Такси</a>
-							<svg class="widget__dots-icon dots-icon _hidden">
+						<div class="widget__header widget-header">
+							<a href="#" class="widget-header__title link _main _primary">Пробки</a>
+							<a href="#" class="widget-header__title link _extra _primary">Метро</a>
+							<a href="#" class="widget-header__title link _extra _primary">Расписание</a>
+							<a href="#" class="widget-header__title link _extra _primary">Такси</a>
+							<svg class="widget-header__dots-icon dots-icon _hidden">
 								<use xlink:href="sprite.svg#dots-vert"></use>
 							</svg>
 						</div>
 
-						<div class="widget__info">
-							<a href="#" class="widget__link link _alignment">
+						<div class="widget__content widget-content">
+							<a href="#" class="widget-content__link link _alignment">
 								<svg class="link__icon traffic-icon">
 									<use xlink:href="sprite.svg#traffic"></use>
 								</svg>
 								<span class="link__rate">1</span>
 							</a>
 
-							<a href="#" class="widget__text link _extra">
+							<a href="#" class="widget-content__text link _extra">
 								<span class="link__text">До 16ч. дороги свободны</span>
 							</a>
 						</div>
@@ -227,11 +227,11 @@
 				</a>
 
 				<a href="#" class="services__item-link link">
-					<div class="link__more-box">
-						<img src="/img/services/box1.svg" class="link__icon more-icon" alt="promo">
-						<img src="/img/services/box2.svg" class="link__icon more-icon" alt="promo">
-						<img src="/img/services/box3.svg" class="link__icon more-icon" alt="promo">
-						<img src="/img/services/box4.svg" class="link__icon more-icon" alt="promo">
+					<div class="link__more more-box">
+						<img src="/img/services/box1.svg" class="more-box__icon more-icon" alt="promo">
+						<img src="/img/services/box2.svg" class="more-box__icon more-icon" alt="promo">
+						<img src="/img/services/box3.svg" class="more-box__icon more-icon" alt="promo">
+						<img src="/img/services/box4.svg" class="more-box__icon more-icon" alt="promo">
 					</div>
 
 					<div class="link__text service-text">еще</div>
@@ -245,24 +245,24 @@
 					</a>
 				</div>
 
-				<form class="search__form" action="">
-					<div class="search__container">
-						<div class="search__actions">
-							<svg class="search__icon micro-icon">
+				<form class="search__form search-form" action="">
+					<div class="search-form__container input-container">
+						<div class="input-container__actions actions">
+							<svg class="actions__icon micro-icon">
 								<use xlink:href="sprite.svg#micro"></use>
 							</svg>
-							<svg class="search__icon keyboard-icon">
+							<svg class="actions__icon keyboard-icon">
 								<use xlink:href="sprite.svg#keyboard"></use>
 							</svg>
 						</div>
 
-						<input class="search__input" type="search" placeholder="Найдётся всё">
-						<button class="search__button" type="submit">Найти</button>
+						<input class="input-container__input" type="search" placeholder="Найдётся всё">
+						<button class="input-container__button" type="submit">Найти</button>
 					</div>
 				</form>
 
-				<div class="search__download">
-					<a href="#" class="search__text link _extra">Скачайте Яндекс.Браузер</a>
+				<div class="search__download download">
+					<a href="#" class="download__link link _extra">Скачайте Яндекс.Браузер</a>
 				</div>
 			</section>
 
@@ -272,9 +272,9 @@
 
 					<span class="link__inscription">Реклама</span>
 
-					<div class="link__text-content">
-						<div class="link__title">Курс "Специалист по Data Science"</div>
-						<div class="link__details">Подробнее на praktikum.yandex.ru</div>
+					<div class="link__content text-content">
+						<div class="text-content__title">Курс "Специалист по Data Science"</div>
+						<div class="text-content__details">Подробнее на praktikum.yandex.ru</div>
 					</div>
 
 					<svg class="link__icon cross-icon">
@@ -316,14 +316,14 @@
 			</a>
 		</div>
 
-		<div class="cards__box _shifted">
-			<div class="cards__covid card _card-default">
+		<div class="cards__box cards-box _shifted">
+			<div class="cards-box__covid card _card-default">
 				<a href="#" class="card__covid-link link">
-					<span class="link__content">Коронавирус в России</span>
+					<span class="link__subtitle">Коронавирус в России</span>
 
-					<div class="link__statistics">
-						<span class="link__info">
-							<span class="link__covid-value">+9145</span>
+					<div class="link__statistics statistics">
+						<span class="statistics__info info-value">
+							<span class="info-value__covid-value">+9145</span>
 							выявлено
 						</span>
 
